@@ -1,0 +1,36 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  text-align: center;
+}
+form {
+  display: inline-block;
+}
+
+#navbar {
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding around the content */
+  width: 100%; /* Full width */
+}
+
+#container {
+  display: flex;
+  margin-top: 20px; /* Space between navbar and container */
+  padding: 10px; /* Padding inside the container */
+  width: 100%; /* Full width */
+  justify-content: space-around;
+  align-items: center;
+}
