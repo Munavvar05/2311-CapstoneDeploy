@@ -3,28 +3,28 @@ class ApiUtils {
     const ProductList = [
       {
         id: "1",
-        image_url: "RoseAbaya.png",
+        image_url: "./assets/RoseAbaya.png",
         name: "Eyana three piece set - Rose ",
         price: 165,
         strikedoffprice: 180,
       },
       {
         id: "2",
-        image_url: "MayaMaxiDress.png",
+        image_url: "./assets/MayaMaxiDress.png",
         name: "Maya Maxi Dress - Off White ",
         price: 124,
         strikedoffprice: 150,
       },
       {
         id: "3",
-        image_url: "MyraLongSlDress.png",
+        image_url: "./assets/MyraLongSlDress.png",
         name: "Myra Long Sleeve Maxi Dress - Dark Rose",
         price: 124,
         strikedoffprice: 150,
       },
       {
         id: "4",
-        image_url: "SerenaAbaya.png",
+        image_url: "./assets/SerenaAbaya.png",
         name: "Serena Hand-Sewn Diamond Abaya Set ",
         price: 180,
       },

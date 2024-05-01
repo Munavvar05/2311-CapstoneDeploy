@@ -1,5 +1,4 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,6 +8,7 @@ import ApiUtils from "../utils/ApiUtils";
 import SearchBar from "../components/Searchbar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
 
 class NavbarMenu extends React.Component {
   constructor(props) {
@@ -34,7 +34,9 @@ class NavbarMenu extends React.Component {
       <>
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            <Navbar.Brand href="/home">Modest Outfits</Navbar.Brand>
+            <Navbar.Brand>
+              <Link to="/home">Modest Outfits</Link>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="w-100">
@@ -46,17 +48,25 @@ class NavbarMenu extends React.Component {
                   </Col>
                   <Col>
                     <NavDropdown title="Account" className="ms-auto">
-                      <Nav.Link onClick={this.handleClick}>Log Out</Nav.Link>
-                      <Nav.Link>Contact Us</Nav.Link>
-                      <Nav.Link href="/orders">Orders</Nav.Link>
+                      <Nav.Link>
+                        <Link onClick={this.handleClick}>Log Out</Link>
+                      </Nav.Link>
+                      <Nav.Link>
+                        <Link>Contact Us</Link>
+                      </Nav.Link>
+                      <Nav.Link>
+                        <Link to="/orders">Orders</Link>
+                      </Nav.Link>
                     </NavDropdown>
                   </Col>
                   <Col>
                     <Nav.Item className="ms-auto">
-                      <Nav.Link href="/cart">
-                        <i className="bi bi-cart3"></i>
-                        &nbsp;
-                        {this.numberOfItemsInCart} Items
+                      <Nav.Link>
+                        <Link to="/cart">
+                          <i className="bi bi-cart3"></i>
+                          &nbsp;
+                          {this.numberOfItemsInCart} Items
+                        </Link>
                       </Nav.Link>
                     </Nav.Item>
                   </Col>
@@ -65,7 +75,6 @@ class NavbarMenu extends React.Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <Outlet />
       </>
     );
   }
